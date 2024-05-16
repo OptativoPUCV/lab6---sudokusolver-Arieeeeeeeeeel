@@ -56,10 +56,29 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-    return 0;
+   for (int i = 0; i < 9; i++){
+      for (int k = 0; k < 9; k++){
+         if(n->sudo[i][k] == 0){
+            return 0;
+         }
+      }
+   }
+    return 1;
 }
 
 Node* DFS(Node* initial, int* cont){
+   Stack* pila = createStack();
+   push(pila, initial);
+   int size = get_size(pila);
+   while(size != 0){
+      *cont = *cont + 1;
+      Node* aux = top(pila);
+      pop(pila);
+      if (is_final(n)){
+         return n;
+      }
+      
+   }
   return NULL;
 }
 

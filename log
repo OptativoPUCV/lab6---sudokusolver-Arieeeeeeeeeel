@@ -2,3 +2,18 @@ Thu 16 May 2024 04:36:35 AM UTC:
  tests:  0|5
 total_score: 0/70
 bc335f7
+Thu 16 May 2024 08:07:30 PM UTC: 
+ sudoku.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:77:20: error: ‘n’ undeclared (first use in this function)
+   77 |       if (is_final(n)){
+      |                    ^
+sudoku.c:77:20: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:75:13: error: unused variable ‘aux’ [-Werror=unused-variable]
+   75 |       Node* aux = top(pila);
+      |             ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+a9e3a1d
