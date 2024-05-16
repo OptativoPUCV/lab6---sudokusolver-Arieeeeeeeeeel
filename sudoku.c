@@ -74,8 +74,8 @@ Node* DFS(Node* initial, int* cont){
       *cont = *cont + 1;
       Node* aux = top(pila);
       pop(pila);
-      if (is_final(n)){
-         return n;
+      if (is_final(aux)){
+         return aux;
       }
       
    }
