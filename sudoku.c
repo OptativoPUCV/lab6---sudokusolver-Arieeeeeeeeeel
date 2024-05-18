@@ -115,7 +115,8 @@ Node* DFS(Node* initial, int* cont){
          push(pila, auxiliarDos);
          auxiliarDos = next(lista);
       }
-      
+      free(lista);
+      free(aux);
    }
   return NULL;
 }
