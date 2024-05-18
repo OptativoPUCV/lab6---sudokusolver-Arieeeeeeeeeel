@@ -100,7 +100,7 @@ Node* DFS(Node* initial, int* cont){
    return NULL;
 }
    
-/*
+
 Node* DFS(Node* initial, int* cont){
    Stack* pila = createStack();
    push(pila, initial);
@@ -112,11 +112,17 @@ Node* DFS(Node* initial, int* cont){
       if (is_final(aux)){
          return aux;
       }
+      List* lista = get_adj_nodes(aux);
+      Node* auxiliarDos = first(lista);
+      while(auxiliarDos){
+         push(pila, auxiliarDos);
+         auxiliarDos = next(lista);
+      }
       
    }
   return NULL;
 }
-*/
+
 
 
 /*

@@ -114,3 +114,15 @@ Sat 18 May 2024 04:42:53 PM UTC:
  tests:  6|2
 total_score: 45/70
 d0cdfec
+Sat 18 May 2024 06:12:18 PM UTC: 
+ sudoku.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c:104:7: error: redefinition of ‘DFS’
+  104 | Node* DFS(Node* initial, int* cont){
+      |       ^~~
+sudoku.c:99:7: note: previous definition of ‘DFS’ with type ‘Node *(Node *, int *)’
+   99 | Node* DFS(Node* initial, int* cont){
+      |       ^~~
+Compilation failed
+426dd74
