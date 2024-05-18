@@ -101,22 +101,19 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
    Stack* pila = createStack();
    push(pila, initial);
-   int size = get_size(pila);
-   while(size != 0){
-      *cont = *cont + 1;
+   while(!is_empty(pila)){
       Node* aux = top(pila);
       pop(pila);
-      if (is_final(aux)){
+      if(is_final(aux)){
          return aux;
       }
       List* lista = get_adj_nodes(aux);
-      Node* auxiliarDos = first(lista);
-      while(auxiliarDos){
-         push(pila, auxiliarDos);
-         auxiliarDos = next(lista);
+      Node* auxDos = first(lista);
+      while(auxDos){
+         push(pila, auxDos);
+         auxDos = next(lista);
       }
-      free(lista);
-      free(aux);
+      clean(lista);
    }
   return NULL;
 }
